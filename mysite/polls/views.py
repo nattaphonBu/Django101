@@ -38,9 +38,9 @@ def vote(request, question_id):
         # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
 
-class IndexView(generic.ListView)
+class IndexView(generic.ListView):
     template_name = 'polls/index.html'
     context_object_name = 'lastest_question_list'
 
-    def get_query(self)
+    def get_query(self):
         return Question.object.order_by('pub_date')[:5]
