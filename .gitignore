@@ -1,0 +1,5 @@
+db.sqlite3
+__pycatch__/
+*.swp
+*.swo
+.models.py.swo
