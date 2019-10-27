@@ -1,0 +1,7 @@
+{% load static %}
+
+<link rel="stylesheet"  type="text/css" href="{% static 'polls/style.css' %}"
+<h1>Your Score</h1>
+{% if not score %}
+    <h2>You don't do this question yet</h2>
+{% endif %}
