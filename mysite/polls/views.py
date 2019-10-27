@@ -12,6 +12,8 @@ def index(request):
    context = {'latest_question_list': latest_question_list,}
    return HttpResponse(template.render(context, request))
 
+def score(request):
+    return render(request,'polls/score.html',{'score': score})
 
 def detail(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
