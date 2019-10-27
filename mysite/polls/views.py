@@ -46,3 +46,6 @@ class IndexView(generic.ListView):
 
     def get_query(self):
         return Question.object.order_by('pub_date')[:5]
+
+def index(request):
+    return HttpResponse("Hello, world. You're at the polls index.")
